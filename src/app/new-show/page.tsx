@@ -2,7 +2,7 @@
 
 import { Button } from 'primereact/button';
 import { Calendar } from 'primereact/calendar';
-import { FileUpload } from 'primereact/fileupload';
+import { FileUpload, FileUploadFile } from 'primereact/fileupload';
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { MultiSelect } from 'primereact/multiselect';
@@ -27,7 +27,7 @@ export default function NewShow() {
     { label: 'Sci-Fi', value: 'Sci-Fi' },
   ];
 
-  const handleFormFieldChange = (field: string, value: any) =>
+  const handleFormFieldChange = (field: string, value: string | number | Date | FileUploadFile | null | undefined) =>
     setForm((prev) => ({
       ...prev,
       [field]: value,

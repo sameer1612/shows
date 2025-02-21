@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
 import { Divider } from 'primereact/divider';
+import { FloatLabel } from 'primereact/floatlabel';
 import { InputText } from 'primereact/inputtext';
 import { Rating } from 'primereact/rating';
 
@@ -92,8 +93,12 @@ export default function Home() {
 
   return (
     <div className="px-10 py-20 w-full max-w-5xl mx-auto space-y-10">
-      <header className="flex justify-between">
-        <InputText placeholder="Search shows" className="flex-1 max-w-md" />
+      <header className="flex justify-between gap-2">
+        <FloatLabel className="flex-1 max-w-md">
+          <InputText className="w-full" />
+          <label htmlFor="username">Search shows</label>
+        </FloatLabel>
+
         <Link href="/new-show" passHref>
           <Button label="Add New" icon="pi pi-plus" />
         </Link>
