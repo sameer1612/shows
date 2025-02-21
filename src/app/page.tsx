@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { Button } from 'primereact/button';
 import { Card } from 'primereact/card';
-import { Divider } from 'primereact/divider';
 import { FloatLabel } from 'primereact/floatlabel';
 import { InputText } from 'primereact/inputtext';
 import { Rating } from 'primereact/rating';
@@ -26,7 +25,7 @@ export default function Home() {
         'A group of kids in the 1980s uncover government secrets and face supernatural threats in their small town.',
       releaseYear: 2016,
       genres: ['Horror', 'Sci-Fi', 'Drama'],
-      rating: 8,
+      rating: 6,
       coverImage: null,
     },
     {
@@ -34,7 +33,7 @@ export default function Home() {
       synopsis: 'Noble families fight for control of the Seven Kingdoms while an ancient enemy rises in the North.',
       releaseYear: 2011,
       genres: ['Action', 'Drama', 'Fantasy'],
-      rating: 9,
+      rating: 5,
       coverImage: null,
     },
     {
@@ -104,13 +103,11 @@ export default function Home() {
         </Link>
       </header>
 
-      <Divider />
-
-      <main className="grid gap-5 grid-cols-1 md:grid-cols-2">
+      <main className="grid gap-2 grid-cols-1 md:grid-cols-2">
         {shows.map((show, idx) => (
           <Card key={idx} title={show.title} subTitle={`${show.releaseYear} | ${show.genres.join(', ')}`}>
             <Rating stars={10} cancel={false} value={show.rating} />
-            <p className="mt-3.5">{show.synopsis}</p>
+            <p className="mt-4">{show.synopsis}</p>
           </Card>
         ))}
       </main>

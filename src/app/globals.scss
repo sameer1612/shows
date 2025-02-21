@@ -10,3 +10,7 @@
   @tailwind components;
   @tailwind utilities;
 }
+
+.p-card {
+  @apply border-2 border-purple-100 shadow-none;
+}
