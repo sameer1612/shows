@@ -91,9 +91,9 @@ export default function Home() {
   ];
 
   return (
-    <div className="px-10 py-20 w-full max-w-5xl mx-auto space-y-10">
+    <div className="mx-auto w-full max-w-5xl space-y-10 px-10 py-20">
       <header className="flex justify-between gap-2">
-        <FloatLabel className="flex-1 max-w-md">
+        <FloatLabel className="max-w-md flex-1">
           <InputText className="w-full" />
           <label htmlFor="username">Search shows</label>
         </FloatLabel>
@@ -103,7 +103,7 @@ export default function Home() {
         </Link>
       </header>
 
-      <main className="grid gap-2 grid-cols-1 md:grid-cols-2">
+      <main className="grid grid-cols-1 gap-2 md:grid-cols-2">
         {shows.map((show, idx) => (
           <Card key={idx} title={show.title} subTitle={`${show.releaseYear} | ${show.genres.join(', ')}`}>
             <Rating stars={10} cancel={false} value={show.rating} />

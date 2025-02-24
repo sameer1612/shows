@@ -40,7 +40,7 @@ export default function NewShow() {
   };
 
   return (
-    <div className="px-10 py-20 w-full max-w-5xl mx-auto space-y-10">
+    <div className="mx-auto w-full max-w-5xl space-y-10 px-10 py-20">
       <header className="flex justify-between">
         <h1 className="text-2xl font-semibold">NEW SHOW</h1>
       </header>
