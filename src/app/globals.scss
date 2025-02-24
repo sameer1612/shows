@@ -1,6 +1,4 @@
-@use './styles/button.scss';
-
-@layer tailwind-base, primereact, tailwind-utilities;
+@use './styles/index.scss';
 
 @layer tailwind-base {
   @tailwind base;
@@ -11,6 +9,4 @@
   @tailwind utilities;
 }
 
-.p-card {
-  @apply border-2 border-purple-100 shadow-none;
-}
+@layer tailwind-base, tailwind-utilities;

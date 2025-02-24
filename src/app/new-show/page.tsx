@@ -42,7 +42,7 @@ export default function NewShow() {
   return (
     <div className="mx-auto w-full max-w-5xl space-y-10 px-10 py-20">
       <header className="flex justify-between">
-        <h1 className="text-2xl font-semibold">NEW SHOW</h1>
+        <h1 className="text-2xl font-semibold">New Show</h1>
       </header>
 
       <main>
